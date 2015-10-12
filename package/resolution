@@ -6,9 +6,10 @@ Contents
 
 1. Abstract
 
-  A library resolver is an abstract component inside the horizon framework. It
-  resolves dependencies from meta information. There are different kinds of
-  resolvers.
+  Package resolution is an essential part of the horizon framework as it is done
+  in a very abstract way. This makes it possible to integrate foreign libraries
+  directly into the ecosystem of the horizon platform. The required interfaces
+  and functionalities are described in this document.
 
 
 2. Resolver Service
