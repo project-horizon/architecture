@@ -28,7 +28,7 @@ Contents
 
   +-----------------------+
   | External Dependencies |
-  |      (Libraries)      |
+  |      (Packages)       |
   +-----------------------+
             ^
             |
@@ -45,39 +45,19 @@ Contents
   | (Updater, Execution) |
   +----------------------+
 
-  In the center of this framework stands an application. An application
-  consists of several compilation units (named modules). It might have or might
-  not have dependencies on external libraries. The runtime creates an loads and
-  runs the application and its external dependencies.
-
 
 3. Application
 
-  An application is a bundle of compilation units and a listing of external
-  dependencies. It can be run with the help of the runtime.
+  An Application is a package exposing a function with the signature:
+
+    main :: IO a
+
+  For further details see ?package/package {6. Executable Package}?.
 
 
-  3.1. Compilation Unit (Module)
+4. Packages
 
-    A compilation unit is a single file forming a part of a program. A module
-    is a compilation unit. A compilation unit has dependencies on other
-    compilation units.
-
-
-  3.2. Application Entry Point
-
-    The applicatin entry point is the function at which the execution of the
-    program begins. In this framework it is the function `Main.main`. So there
-    must be a module named `Main` which exports a symbol named `main`.
-
-    The main function's signature must match:
-
-        main :: IO ()
-
-
-4. External Dependencies
-
-  See "libraries/libraries".
+  See ?package/package?.
 
 
 5. Runtime

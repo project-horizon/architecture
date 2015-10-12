@@ -8,19 +8,20 @@ Contents
 
 1. Abstract
 
-  The horizon platform needs a way to split up software in libraries. A library
-  contains by that an interface to map the exposed modules to function registers
-  and function names to functions in a binary blob.
+  On most platforms there are ways to split software into modular systems. In
+  horizon there will be a way to distribute multiple modules as a package. A
+  package can define dependencies on other packages that can be either resolved
+  at compile or runtime.
 
 
 2. Interface
 
-  See ?libraries/interface?.
+  See ?package/interface?.
 
 
 3. Binary Blob
 
-  See ?libraries/binary_blob?.
+  See ?package/binary_blob?.
 
 
 4. Packaging
@@ -37,4 +38,9 @@ Contents
   "blob.lang" is a placeholder for the name of a specific binary blob. The
   extension ("lang" in the example) stands for the target platform. For example
   the JavaScript compilation target would be represented with a "js" extension.
+
+
+5. Resolution
+
+  See ?package/resolution?.
 
