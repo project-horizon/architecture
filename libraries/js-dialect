@@ -1,0 +1,64 @@
+Contents
+
+  1.  Abstract
+  2.  Literals
+    2.1.  ?..?-Literal
+    2.2.  !..!-Literal
+    2.3.  ...-Literal
+
+
+1. Abstract
+
+  The documents describing the implementation of interface files and binary
+  blobs for the JavaScript compilation target use a version of JavaScript
+  pseudo code to describe structural definitions in a declarative way. The
+  extensions to JavaScript are described inside this document.
+
+
+2. Literals
+
+  The JavaScript language is extended with several literals that describe
+  JavaScript elements in a structural way.
+
+
+  2.1. ?..?-Literal
+
+    The ?..?-Literal is used to refer to a heading in this document. The defined
+    data structure under the heading will be the value in a real interface file at
+    this location.
+
+    Example:
+
+      {
+        "foo": ?2. JSON Dialect?
+      }
+
+
+  2.2. !..!-Literal 
+
+    The !..!-Literal is used to describe the field in plain text.
+
+    Example:
+
+      {
+        "foo": !A simple number value!
+      }
+  2.3. ...-Literal
+
+    The ...-Literal can be used to represent repeating of the previous elements
+    in a list. The exact meaning must be described in the description text for
+    the given element. This restriction is used to resolve ambigous semantics.
+
+    Example:
+
+      A list of plugins described in a list with a tuple of a name and a version.
+
+      [
+        {
+          "name": !The name of a plugin.!,
+          "version": !The version of a plugin.!
+        },
+        ...
+      ]
+
+
