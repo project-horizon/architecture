@@ -8,6 +8,7 @@ Contents
     3.1.  Compiler
     3.2.  Package Database
     3.3.  Foreign Library Interface
+  4.  Package Resolution Protocol
 
 
 1. Abstract
@@ -70,4 +71,19 @@ Contents
     The foreign library interface can be accessed with simple RESTful Web
     Services. The exact specification is described in
     ?package/resolution/services/foreign_library_interface?.
+
+
+4. Package Resolution Protocol
+
+  The package resolution protocol is a simple protocol based on RESTful Web
+  Services. It can be implemented in any application providing additional
+  functionality for a horizon application.
+
+
+  4.1. Resolving a Package
+
+    /package/{package-name}/{package-version}
+
+  package-name:    The name of a package
+  package-version: The version of a package. A version constraint is viable.
 
