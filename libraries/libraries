@@ -1,0 +1,40 @@
+Contents
+
+  1.  Abstract
+  2.  Interface
+  3.  Binary Blob
+  4.  Packaging
+
+
+1. Abstract
+
+  The horizon platform needs a way to split up software in libraries. A library
+  contains by that an interface to map the exposed modules to function registers
+  and function names to functions in a binary blob.
+
+
+2. Interface
+
+  See ?libraries/interface?.
+
+
+3. Binary Blob
+
+  See ?libraries/binary_blob?.
+
+
+4. Packaging
+
+  A library is stored in the layout of ZIP.
+
+  Folder Layout:
+
+    zip-file/
+      interface.json
+      blobs/
+        blob.lang
+
+  "blob.lang" is a placeholder for the name of a specific binary blob. The
+  extension ("lang" in the example) stands for the target platform. For example
+  the JavaScript compilation target would be represented with a "js" extension.
+
