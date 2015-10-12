@@ -1,7 +1,13 @@
 Contents
 
   1.  Abstract
-  2.  Resolver Service
+  2.  Resolution Process
+    2.1.  Static Resolution
+    2.2.  Dynamic Resolution
+  3.  Resolver Service
+    3.1.  Compiler
+    3.2.  Package Database
+    3.3.  Foreign Library Interface
 
 
 1. Abstract
@@ -12,10 +18,56 @@ Contents
   and functionalities are described in this document.
 
 
-2. Resolver Service
+2. Resolution Process
 
-  A resolver service can resolve to a library from a simple name and version
-  pair. By that the resolver service plays an important role during compilation.
-  A resolver service must implement a RESTful Web Service providing the resolver
-  API.
+  A package resolution can be achieved in a static and dynamic way. Both ways
+  provide strong benefits and because of that reason, both ways are supported.
+  The resolution of a static dependency must be done by the compiler whereas a
+  dynamic resolution is performed by the runtime.
+
+
+  2.1. Static Resolution
+
+    The static resolution must be done by the compiler which embeds a library
+    into the resulting binary blob. It is comparable with a static library you
+    might know from C++. An embedded library will provide only the necessary
+    code. That implies that unused functions will be dropped from the resulting
+    binary blob. A static linked library provides the highest level of
+    code obfuscation.
+
+
+  2.2. Dynamic Resolution
+
+    Dynamic resolution is performed at runtime. It can access all kinds of
+    resolution and there is no restriction compared to the static resolution.
+    During dynamic resolution the resolver tries to resolve the dependency with
+    information given from a meta object.
+
+
+3. Resolver Service
+
+  A resolver service is a component in the horizon ecosystem that can provide
+  a library in binary form.
+
+
+  3.1. Compiler
+
+    The compiler for the horizon language is a resolver service as it provides
+    access to compiled libraries. The exact process of providing compiled
+    sources after compilation is described in
+    ?package/resolution/services/compiler?.
+
+
+  3.2. Package Database
+
+    A package database is a huge collection packages that can be accessed with
+    simple RESTful Web Services. The exact specification is described in
+    ?package/resolution/services/package_database?.
+
+
+  3.3. Foreign Library Interface
+
+    The foreign library interface can be accessed with simple RESTful Web
+    Services. The exact specification is described in
+    ?package/resolution/services/foreign_library_interface?.
 
