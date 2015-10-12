@@ -48,16 +48,16 @@ Contents
 
 3. Application
 
-  An Application is a package exposing a function with the signature:
+  An application is an executable package.
 
-    main :: IO a
-
-  For further details see ?package/package {6. Executable Package}?.
+  See ?package/package {3. Executable Package}?.
 
 
-4. Packages
+4. External Dependencies
 
-  See ?package/package?.
+  External dependencies are solved with packages.
+
+  See ?package/package? and ?package/resolution?.
 
 
 5. Runtime
