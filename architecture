@@ -17,8 +17,11 @@ Contents
 
 1. Abstract
 
-  This document reflects the internal architecture of the nessy framework. It
-  is a a technical documentation of all implementations inside the framework.
+  The horizon platform is a runtime for flexible applications. The main goal
+  of the horizon platform is to write innovative applications over language
+  boundaries. The concepts used in the framework, runtime and compiler make
+  it possible to write applications with dependencies to completely different
+  library ecosystems wihtout any hassle for the developer.
 
 
 2. Overview
