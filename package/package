@@ -4,6 +4,8 @@ Contents
   2.  Interface
   3.  Binary Blob
   4.  Packaging
+  5.  Resolution
+  6.  Foreign Packages
 
 
 1. Abstract
@@ -43,4 +45,9 @@ Contents
 5. Resolution
 
   See ?package/resolution?.
+
+
+6. Foreign Packages
+
+  See ?package/foreign?.
 
