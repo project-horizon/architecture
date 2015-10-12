@@ -1,0 +1,29 @@
+Contents
+
+  1.  Abstract
+  2.  Symobl Names
+  3.  Function Register
+
+
+1. Abstract
+
+  A binary blob is the code of all modules compiled for a specific platform.
+  The binary blob itself must be obfuscated so that it is impossible to deduce
+  any meaning of symbol names. That makes it necessary that a binary blob is
+  delivered with an interface file. An interface file describes the structure
+  of a binary blob.
+
+
+2. Symbol Names
+
+  Symbol names must be unique in the scope of the package. This is done to make
+  it unnecessary for any resolution of the module inside the binary blob. The
+  mapping of the unique symbol name to the fully qualified name of a function
+  is defined in the interface file.
+
+
+3. Function Register
+
+  The function register guarantees access to all functions inside a package
+  with the unique symbol name of the function.
+
