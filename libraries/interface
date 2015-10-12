@@ -1,0 +1,60 @@
+Contents
+
+  1.  Abstract
+  2.  Layout
+    2.1.  Meta Section
+    2.2.  Module Register
+      2.2.1.  Type Register
+      2.2.2.  Function Register
+
+
+1. Abstract
+
+  The library interface is used to map module and function names to values in
+  the binary blob. A requirement for binary blobs on the horizon platform is
+  the obfuscation of all compiled code. That includes the renaming of
+  meaningless identifiers for intermediate variables, function parameters and
+  hash tables for module and function registers. A module interface provides
+  the required information for mapping module and function names to values.
+
+2. Layout
+
+  A library interface must provide and restrict access to some essential parts
+  of a library. By that an implementation for a specific compilation target,
+  all conditions that are described inside this document must be met.
+
+
+  2.1. Meta Section
+
+    The meta section contains information that define dependencies between
+    libraries.
+
+    Required attributes:
+
+      * the name of the library
+      * the version of the library
+      * a list of names and versions of libraries on which this library depends
+
+
+  2.2. Module Register
+
+    The exposed modules section maps exposed identifiers to function
+    implementation names. This makes it possible to create obfuscated
+    applications which don't expose their meaning in code.
+
+    Required attributes:
+
+      * a register for mapping module names to module interfaces
+
+
+    2.2.1. Type Register
+
+      The type register contains all type signatures of the defined GADTs.
+
+      TODO: definition of type register
+
+    2.2.2. Function Register
+
+      The function register contains the mapping from a unique identifier
+      inside the module to a unique identifier inside a binary blob.
+
