@@ -1,0 +1,60 @@
+Contents
+
+  1.  Abstract
+  2.  Foreign Package
+    2.1.  Data Types
+    2.2.  Functions
+    2.3.  Marshalling
+  3.  Foreign Package Interface Protocol
+    3.1.  Invoke
+
+1. Abstract
+
+  Foreign packages are an important issue in any new platform. There is some
+  functionality on platform XXX that you need to use. For this very special
+  and annoying issue there will be a solution in horizon; the Foreign Package
+  Interface. The FPIP (Foreign Package Interface Protocol) provides access to
+  the library ecosystem of implemented platforms. With the help of reflection
+  and on the fly compilers, an FPI-Service handles the complete mapping of
+  horizon to platform X. The service creates all required data structures in
+  the horizon ecosystem and provides function abstractions that handle all
+  performed marshalling of data in the background for you.
+
+
+2. Foreign Package
+
+  A foreign package is a library that provides functionality for the horizon
+  platform but runs itself on a different platform. It can be exposed with
+  help of the FPI-Protocol.
+
+
+  2.1. Data Types
+
+    The data types that are defined in a foreign package must be exposed to the
+    horizon ecosystem. The FPI-Service must define data types that are equivalent
+    to the data types defined in the foreign package.
+
+
+  2.2. Functions
+
+    For exposed foreign functions the FPI-Service must generate a wrapper that
+    invokes the underlying foreign function. The incoming and outgoing data must
+    be marshalled.
+
+
+3. Foreign Package Interface Protocol
+
+  The FPIP (Foreign Package Interface Protocol) is an extension to the PRP
+  (Package Resolution Protocol; see ?package/resolution? for further
+  information). The PRP handles the resolution of a horizon platform package.
+  An implementor of the FPIP must implement the PRP too.
+
+
+  3.1. Invoke
+
+      /invoke/{package-name}/{package-version}/{module}/{function}
+
+    The concrete marshalling process of function parameters is left to the
+    implementor of the FPIP. The only requirement for the marshalling process
+    is consistent marshalling between horizon and the target platform.
+
