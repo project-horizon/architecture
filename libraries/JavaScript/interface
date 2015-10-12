@@ -1,0 +1,63 @@
+Contents
+
+  1.  Abstract
+  2.  Disclaimer
+  3.  Layout
+    3.1.  Meta Section
+      3.1.1.  Dependencies
+        3.1.1.1.  Dependency
+
+
+1. Abstract
+
+  This document describes the implementation details of interface files on the
+  compilation target JavaScript. The implementation requires only a subset of
+  JavaScript aka JSON to provide the necessary functionality.
+
+
+2. Disclaimer
+
+  The source code provided inside this document is written in a pseudo dialect
+  of JavaScript. The source code is by no means intended to be interpreted or
+  compiled in any way. It represents the mere structure of source code
+  containing declarative definitions of module elements.
+
+
+3. Layout
+
+  The layout of an interface file contains two main sections. The meta section
+  and the module register.
+
+    {
+      "meta":    ?3.1. Meta Section?,
+      "modules": ?3.2. Module Register?
+    }
+
+
+  3.1. Meta Section
+
+    The meta section contains information about the
+    library itself and the libraries dependencies on other libraries.
+
+      {
+        "name": !The name of this library.!,
+        "version": !The version of this library.!,
+        "dependencies": ?3.1.1. Dependencies?
+      }
+
+
+    3.1.1. Dependencies
+
+      This is a simple list of dependencies. The dependency definition must
+      follow the constraints defined in section ?3.1.1.1. Dependency?.
+
+        [ ?3.1.1.1. Dependency?, ... ]
+
+
+      3.1.1.1. Dependency
+
+        A dependency can be resolved over several mechanisms.
+
+          * Resolver library
+          * Embedded Library
+
