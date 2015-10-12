@@ -1,0 +1,20 @@
+Contents
+
+  1.  Abstract
+  2.  Resolver Service
+
+
+1. Abstract
+
+  A library resolver is an abstract component inside the horizon framework. It
+  resolves dependencies from meta information. There are different kinds of
+  resolvers.
+
+
+2. Resolver Service
+
+  A resolver service can resolve to a library from a simple name and version
+  pair. By that the resolver service plays an important role during compilation.
+  A resolver service must implement a RESTful Web Service providing the resolver
+  API.
+
