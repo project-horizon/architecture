@@ -1,11 +1,13 @@
 Contents
 
   1.  Abstract
-  2.  Interface
-  3.  Binary Blob
-  4.  Packaging
-  5.  Resolution
-  6.  Foreign Packages
+  2.  Package Layout
+    2.1.  Interface
+    2.2.  Binary Blob
+    2.3.  Packaging
+  3.  Executable Package
+  4.  Resolution
+  5.  Foreign Packages
 
 
 1. Abstract
@@ -16,33 +18,36 @@ Contents
   at compile or runtime.
 
 
-2. Interface
+2. Package Layout
 
-  See ?package/interface?.
+  2.1. Interface
 
-
-3. Binary Blob
-
-  See ?package/binary_blob?.
+    See ?package/interface?.
 
 
-4. Packaging
+  2.2. Binary Blob
 
-  A library is stored in the layout of ZIP.
-
-  Folder Layout:
-
-    zip-file/
-      interface.json
-      blobs/
-        blob.lang
-
-  "blob.lang" is a placeholder for the name of a specific binary blob. The
-  extension ("lang" in the example) stands for the target platform. For example
-  the JavaScript compilation target would be represented with a "js" extension.
+    See ?package/binary_blob?.
 
 
-5. Resolution
+  2.3. Packaging
+
+    A library is stored in the layout of ZIP.
+
+    Folder Layout:
+
+      zip-file/
+        interface.json
+        blobs/
+          blob.lang
+
+    "blob.lang" is a placeholder for the name of a specific binary blob. The
+    extension ("lang" in the example) stands for the target platform. For
+    example the JavaScript compilation target would be represented with a "js"
+    extension.
+
+
+6. Resolution
 
   See ?package/resolution?.
 
